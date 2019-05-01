@@ -1,0 +1,35 @@
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog"> 
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"  [routerLink]="['/dashboard/team-list']">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body" style="border:solid black 2px;">
+
+
+        <!-- add-team page  -->
+        <div class="login-page">
+          <div class="form">
+            <form class="login-form" [formGroup]="add_TeamForm" (ngSubmit)="add(add_TeamForm.value)">
+              <h3 class="text-center text-success">Add Team </h3><br>
+             
+              <input type="text" placeholder="team_name" formControlName="team" />
+            
+              <input type="text" placeholder="Revenue" formControlName="revenue" />
+              
+              <button type="submit">Add</button>
+            </form>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" [routerLink]="['/dashboard/team-list']" >Close</button>
+      </div>
+    </div>
+    </div>
+    </div>
